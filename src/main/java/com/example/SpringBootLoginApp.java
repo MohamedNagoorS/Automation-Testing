@@ -90,11 +90,7 @@ public class SpringBootLoginApp {
             return VIEW_LOGIN;
         }
     
-        // Validate input length
-        if (username.length() > MAX_LENGTH || password.length() > MAX_LENGTH) {
-            model.addAttribute(MODEL_ATTRIBUTE_ERROR, ERROR_INVALID_CREDENTIALS);
-            return VIEW_LOGIN;
-        }
+       
     
         // Perform credential validation
         if (VALID_USERNAME.equals(username) && VALID_PASSWORD.equals(password)) {
